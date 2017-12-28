@@ -1,0 +1,306 @@
+#Linux基础第二季
+
+该写第07章 数学运算
+
+结构化命令
+
+函数
+说脚本的时候说一下exit的退出作用。可以传回返回值
+
+
+第11章退出状态码
+
+书上十二章及以后的内容还需要过
+
+
+Linux目录挂载结构 FHS标准
+
+参数可以组合使用例如 -alF （在介绍ls的时候说明一下）
+另外就是info中提到的通用参数--help等
+但是不同的命令不大一样，具体以命令的说明文件为准。
+
+写Coreutils时重新过一遍命令行的书（两本kindle电子书都要看一遍）
+
+变量$$表示当前进程自己的PID
+
+介绍包依赖的时候尽量避免循环依赖
+
+先介绍基本的xterm
+
+
+说明一下常用的bash环境变量。《Linux命令行与Shell脚本编程大全》里有个环境变量表
+先介绍变量，然后介绍环境变量
+
+介绍man命令，可以分页查看 man -k查出来的条目括号里的数字是页面
+
+尚未介绍的被依赖的包：
+glibc
+ncurses
+readline
+尚未介绍的拓展包（需要说明是对谁的拓展）：
+
+正在介绍：
+bash
+已介绍的包：
+bash-completion
+
+
+依赖项只介绍单向依赖
+可选的双向依赖作为功能拓展
+（A，B相互依赖，B对A来说可选，但是A对B不可选。B为A的功能拓展。等同于B依赖于A，而A不依赖于B）
+（如果A，B相互依赖，并且都为可选。视为配合，仍然放到功能拓展里介绍。）
+（功能拓展里的包对介绍主题都是可选的，但是介绍主体对他们来说是不是可选的不重要。）
+（功能拓展包不一定在介绍本体的时候完全介绍。一般介绍非常常用的，和本体一块写教程的或者在Arch中列为相互依赖的。）
+流和管道
+
+硬盘分区和文件系统格式化作为两层内容进行介绍
+
+bash程序结构语句
+
+内置命令
+bash脚本
+管道
+bash配置文件和环境变量
+
+bash启动后自动执行的脚本
+bash变量，bash环境变量
+
+虚拟终端
+C-M-F1 进入终端
+C-M-F7 返回图形化界面
+
+arch官网可以查看包依赖关系
+man man-db
+man基于less
+info GNU texinfo 这是gnu计划的说明查看器，还有一个集成于emacs的版本 
+Coreutils 文件管理和进程管理工具包
+
+1. 命令信息与帮助
+    * man 查看程序手册。man是一个浏览器，而具体的程序手册由程序自己提供。这个程序是从Unix时代继承来的。
+    * info 用于查看GNU计划的程序的信息文档。与man手册有一定交集，但是一般GNU计划的程序才会提供info文档，并且如果同时提供了info和man文档，info中的内容会更加全面。info命令并没有被打包在busybox中，但是大部分发行版中都有安装。
+****
+接下来简单复习并补充说明一下上一季介绍过的几类命令。首先是文件管理、输入输出流工具和文本编辑。
+****
+1. 目录、文件基本操作
+    * mkdir 创建目录
+    * rmdir 删除目录（被删除的目录必须为空）
+    * ls 显示指定目录下文件
+    * tree 用树形图显示指定目录的结构（不属于busybox，有可能需要自行安装）
+    * file 确定文件类型。该命令并未包含于busybox中，但是一般发行版会自带。
+    * touch 更新文件修改时间
+    * rm 删除文件
+    * mv 移动文件
+    * cp 复制文件
+    * ln 创建文件链接
+    * find 通过文件名查找文件
+    * stat 显示文件或者文件系统的状态
+    * md5sum 对文件进行md5检验
+2. 标准输入输出流工具
+    * cat 链接多个文件并输出到标准输入输出流。
+    * tee从标准输入流读入，输出到标准输出流和指定文件。
+    * xargs 在标准输入流的环境中执行命令（例如`find ./ | xargs ls`）。这个命令主要用于辅助一些不支持管道的命令。
+3. 文本编辑
+    * less 文本查看器
+    * sort 文本按行排序
+    * uniq 删除文本重复行
+    * wc 显示文本行数字数等统计信息
+    * grep 查找文本中符合一定条件的行 
+    * head 查看文本开头几行
+    * tail 查看文本结尾几行
+    * cut 从文本行中提取部分内容
+    * paste 把文本按行合并
+    * join 连接两文本中具有相同字段的行
+    * comm 逐行比较两个已排序的文件
+    * diff 逐行比较文件
+    * patch 给文件打补丁
+    * tr 替换或删除字符
+    * sed 流式编辑器
+    * vi 文本编辑工具
+****
+然后是用户管理、组管理和文件模式管理。
+****
+1. 用户
+    * useradd 创建用户（busybox没有此命令，但是有adduser）
+    * userdel 删除用户（busybox没有此命令，但是有deluser）
+    * usermod 修改用户信息（busybox没有此命令）
+    * passwd 修改用户密码
+2. 组
+    * groupadd 创建组（busybox没有此命令，但是有addgroup)
+    * groupdel 删除组（busybox没有此命令，但是有delgroup）
+    * groupmod 修改组信息（busybox没有此命令）
+3. 文件权限
+
+    * chmod 改变文件或目录权限
+    * chown 改变文件或目录所属用户
+    * chgrp 改变文件或目录所属组 
+
+
+
+
+
+用户信息存放文件
+/etc/passwd 保存用户基本信息
+/etc/shadow 保存用户密码
+组信息存放
+/etc/group 保存组基本信息
+
+
+
+
+归档压缩：tar,gzip
+文件校验：md5,sha1
+
+
+
+终端设置stty 可以设置终端快捷键等。这个包单独说一下，但不是合并到bash的介绍中。
+
+
+
+
+12. 命令行小工具
+    * clear 清屏
+    * cal 日历
+    * date 日期 
+# 总计划
+* linux2：bash等
+* 包管理：dpkg、apt
+# 包含的工具包或者单体软件
+* sudo
+* xlogo
+* shutdown
+* apt
+* ssh
+
+## 压缩、打包（归档）
+* gzip(bzip2)(zip)  文件压缩与解压 
+* tar 归档工具
+## 权限、用户、群组
+* id 显示用户身份标识
+* su 以另一用户身份运行shell
+* sudo 以另一用户身份执行命令
+* passwd 修改或者设置用户密码
+* chmod 更改文件权限
+* chown 更改文件所有者
+* chgrp 更改文件所属群组
+* xlogo 用窗体显示一个logo
+## 进程
+* ps 查看当前所有进程的信息
+* top 动态查看进程信息
+* shutdown 关机
+## 存储介质管理
+* mount 挂载文件系统 在挂载之前，设备并不是一个目录
+* umount 卸载文件系统
+* fdisk 硬盘分区 设备需要先分区然后创建文件系统
+* mkfs 创建文件系统
+* fsck 检查修复文件系统
+* dd 直接操作存储器数据
+* df 查看已挂载磁盘使用情况    df -h
+* du 查看制定目录磁盘使用情况
+## 网络
+* ping 检查网络联通状况
+* traceroute 显示数据包到网络主机的路由路径
+* netstat 检查网络设置及相关统计数据
+* ftp 用FTP（文件传输协议）传输文件
+* wget 非交互式网络下载工具
+* rsync 远程文件同步
+* ssh 安全登录远程计算机。ssh程序还提供scp和sftp命令，用于安全传输文件。
+## Linux包管理
+* dpkg （包含于busybox）
+* apt （未包含于busybox）
+pacman
+
+非busybox命令：pstree，htop
+环境配置
+* 查看环境变量
+* 修改环境变量
+* 编写配置文件
+
+
+文件系统管理加上stat
+
+正则表达式
+用户和组管理
+
+## 包管理
+* dpkg
+* apt
+
+压缩归档
+gzip 压缩
+tar 归档
+压缩就是节省数据存储所需要的空间
+归档是把多个文件按目录结构打包
+.tgz 为后缀的文件表示这是用gzip压缩过的tar文件
+在Linux中这使用两个工具，但是在zip工具可以把这两个步骤结合
+
+
+sudo不能使用bash内嵌命令。
+
+更好的工具 htop 进程管理
+
+## 环境变量 
+* 所谓的环境变量就是控制bash工作环境的变量。对环境变量进行调整就能影响到shell的工作方式。所以调整环境变量其实就是在设置bash。
+* 环境变量分为两类：全局变量对所有的shell进程都可见，而局部变量只在创建它的进程可见（创建它的进程关闭后则消失）
+## 环境设置
+* printenv 输出环境变量到标准输出流
+
+* 系统初始化的全局环境变量，变量名字母全为大写。
+* 直接在标识符后使用等号赋值，即可创建环境变量。（值可以是数值或字符串）
+* 这样创建的环境变量只是局部变量。就是在当前shell的子shell中也不能使用。
+* 全局变量在该进程和其所有子进程可见。但关闭进程后还是得重新设置。
+* 可以把设置写到随shell启动的脚本中，这样就不用每次设置。
+* 如果在子进程中使用删除全局变量操作，这个操作仅仅对这个子进程有效。
+关于设置bash具体项目的系统环境变量名，可以通过帮助手册查看
+演示一个自定义命令提示符。还有把home文件夹设置入PATH
+
+登陆bash后启动的文件
+按顺序
+/etc/profile
+$HOME/.bash_profile
+$HOME/.bash_login
+$HOME/.profile
+后三个文件一般只用一个。例如Debian用.profile
+如果bash不是随登陆启动的（例如是在另一个bash中通过bash命令启动的）。这种bash叫做交互式bash。交互式bash不读取以上四个文件，而会读取
+$HOME/.bashrc
+而这个文件会先访问
+/etc/bashrc
+
+这一系列机制保证了有公共执行的部分也有用户自定义的空间
+
+
+nohup
+screen
+
+
+下一个介绍Coreutils
+
+所有 GNU 软件包（已经在做教程的就移除）
+
+3dldf  8sync  a2ps  acct  acm  adns  alive  anubis  apl  archimedes  aris  artanis  aspell  auctex  autoconf  autoconf-archive  autogen  automake  avl  ballandpaddle  barcode  bayonne  bazaar  bc  bfd  binutils  bison  bool  bpel2owfn  c-graph  ccaudio  ccd2cue  ccide  ccrtp  ccscript  cflow  cgicc  chess  cim  classpath  classpathx  clisp  combine  commoncpp  complexity  config  consensus  coreutils  cpio  cppi  cssc  cursynth  dap  datamash  dc  ddd  ddrescue  dejagnu  denemo  dia  dico  diction  diffutils  dionysus  direvent  djgpp  dominion  dr-geo  easejs  ed  edma  electric  emacs  emacs-muse  emms  enscript  eprints  epsilon  fdisk  ferret  findutils  fisicalab  foliot  fontopia  fontutils  freedink  freefont  freeipmi  freetalk  fribidi  g-golf  gama  garpd  gawk  gbehistun  gcal  gcc  gcide  gcl  gcompris  gdb  gdbm  gengen  gengetopt  gettext  gforth  ggradebook  ghostscript  gift  gimp  glean  gleem  glib  global  glpk  glue  gmediaserver  gmp  gnash  gnat  gnats  gnatsweb  gneuralnetwork  gnome  gnowsys  gnu-c-manual  gnu-crypto  gnu-pw-mgr  gnuae  gnuastro  gnubatch  gnubg  gnubiff  gnubik  gnucap  gnucash  gnucobol  gnucomm  gnudos  gnue  gnufm  gnugo  gnuit  gnujdoc  gnujump  gnukart  gnulib  gnumach  gnumed  gnumeric  gnump3d  gnun  gnunet  gnupg  gnupod  gnuprologjava  gnuradio  gnurobots  gnuschool  gnushogi  gnusound  gnuspeech  gnuspool  gnustandards  gnustep  gnutls  gnutrition  gnuzilla  goptical  gorm  gpaint  gperf  gprolog  grabcomics  greg  grep  gretl  groff  grub  gsasl  gsegrafix  gsl  gslip  gsrc  gss  gtick  gtk+  gtypist  guile  guile-cv  guile-dbi  guile-gnome  guile-ncurses  guile-opengl  guile-rpc  guile-sdl  guix  gurgle  gv  gvpe  gxmessage  gzip  halifax  health  hello  help2man  hp2xx  html-info  httptunnel  hurd  hyperbole  icecat  idutils  ignuit  indent  inetutils  inklingreader  intlfonts  jacal  java-getopt  jel  jtw  jwhois  kawa  kopi  leg  less  libc  libcdio  libdbh  liberty-eiffel  libextractor  libffcall  libgcrypt  libiconv  libidn  libjit  libmatheval  libmicrohttpd  libredwg  librejs  libsigsegv  libtasn1  libtool  libunistring  libxmi  lightning  lilypond  lims  linux-libre  liquidwar6  lispintro  lrzsz  lsh  m4  macchanger  mailman  mailutils  make  marst  maverik  mc  mcron  mcsim  mdk  mediagoblin  melting  metaexchange  metahtml  metalogic-inference  mifluz  mig  miscfiles  mit-scheme  moe  motti  mpc  mpfr  mpria  mtools  nana  nano  nano-archimedes  ncurses  nettle  network  ocrad  octave  oleo  oo-browser  orgadoc  osip  panorama  parallel  parted  pascal  patch  paxutils  pcb  pdf  pem  pexec  pgccfd  phantom_home  pies  pipo  plotutils  polyxmass  powerguru  proxyknife  pspp  psychosynth  pth  pyconfigure  pythonwebkit  qexo  quickthreads  r  radius  rcs  readline  recutils  reftex  remotecontrol  ring  rottlog  rpge  rush  sather  scm  screen  sed  serveez  sharutils  shepherd  shishi  shmm  shtool  sipwitch  slib  smalltalk  social  solfege  spacechart  speex  spell  sqltutor  src-highlite  stalkerfs  stow  stump  superopt  swbis  sysutils  taler  talkfilters  tar  termcap  termutils  teseq  teximpatient  texinfo  texmacs  thales  time  tramp  trans-coord  trueprint  unifont  units  unrtf  userv  uucp  vc-dwim  vcdimager  vera  vmgen  wb  wdiff  websocket4j  webstump  wget  which  womb  xaos  xboard  xhippo  xlogmaster  xmlat  xnee  xorriso  zile 
+
+bash内置命令
+ job_spec [&]                                                         
+ . filename [arguments]                                                
+ :                                        
+ let arg [arg ...]
+ local [option] name[=value] ...
+ logout [n]
+ mapfile [-n count] [-O origin] [-s count] [-t] [-u fd] [-C callback] [-c quantum] [array]
+ bind [-lpsvPSVX] [-m keymap] [-f filename] [-q name] [-u name] [-r keyseq] [-x keyseq:shell->  popd [-n] [+N | -N]
+ printf [-v var] format [arguments]
+ pushd [-n] [+N | -N | dir]
+ caller [expr]                                                                                          
+ command [-pVv] command [arg ...]                                                    readonly [-aAf] [name[=value] ...] or readonly -p
+ shift [n]
+ coproc [NAME] command [redirections]                                                           shopt [-pqsu] [-o] [optname ...]
+ declare [-aAfFgilnrtux] [-p] [name[=value] ...]                                                source filename [arguments]
+ dirs [-clpv] [+N] [-N]                                                                         
+ time [-p] pipeline
+ enable [-a] [-dnps] [-f filename] [name ...]                                                   times
+ eval [arg ...]                                                                                 trap [-lp] [[arg] signal_spec ...]
+ typeset [-aAfFgilrtux] [-p] name[=value] ...
+ ulimit [-SHabcdefilmnpqrstuvxT] [limit]
+ fc [-e ename] [-lnr] [first] [last] or fc -s [pat=rep] [command]                                                                               
+ function name { COMMANDS ; } or name () { COMMANDS ; }                                         
+ getopts optstring name [arg]                                                                  
+ hash [-lr] [-p pathname] [-dt] [name ...]                                                     
