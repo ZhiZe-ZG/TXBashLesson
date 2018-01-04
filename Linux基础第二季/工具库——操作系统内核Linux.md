@@ -86,27 +86,17 @@
         10.2 dir: Briefly list directory contents
         10.3 vdir: Verbosely list directory contents
         10.4 dircolors: Color setup for ls
-    11 Basic operations
-        11.1 cp: Copy files and directories
-        11.2 dd: Convert and copy a file
-        11.3 install: Copy files and set attributes
-        11.4 mv: Move (rename) files
-        11.5 rm: Remove files or directories
-        11.6 shred: Remove files more securely
     12 Special file types
         12.1 link: Make a hard link via the link syscall
         12.2 ln: Make links between files
-        12.3 mkdir: Make directories
         12.4 mkfifo: Make FIFOs (named pipes)
         12.5 mknod: Make block or character special files
         12.6 readlink: Print value of a symlink or canonical file name
-        12.7 rmdir: Remove empty directories
         12.8 unlink: Remove files via the unlink syscall
     13 Changing file attributes
         13.1 chown: Change file owner and group
         13.2 chgrp: Change group ownership
         13.3 chmod: Change access permissions
-        13.4 touch: Change file timestamps
     14 Disk usage
         14.1 df: Report file system disk space usage
         14.2 du: Estimate file space usage
