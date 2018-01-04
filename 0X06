@@ -7,3 +7,5 @@
 
 util-linux(设置tty等(setterm))和linux的kernel在一个网站(utils中)
 也提供了cal等命令
+
+终端设置和登陆
