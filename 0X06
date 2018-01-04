@@ -13,3 +13,5 @@ util-linux(设置tty等(setterm))和linux的kernel在一个网站(utils中)
 终端设置和登陆
 
 shutdown,reboot
+
+grep,less,diff
