@@ -74,18 +74,6 @@
             9.1.3 Squeezing repeats and deleting
         9.2 expand: Convert tabs to spaces
         9.3 unexpand: Convert spaces to tabs
-    10 Directory listing
-        10.1 ls: List directory contents
-            10.1.1 Which files are listed
-            10.1.2 What information is listed
-            10.1.3 Sorting the output
-            10.1.4 Details about version sort
-            10.1.5 General output formatting
-            10.1.6 Formatting file timestamps
-            10.1.7 Formatting the file names
-        10.2 dir: Briefly list directory contents
-        10.3 vdir: Verbosely list directory contents
-        10.4 dircolors: Color setup for ls
     12 Special file types
         12.1 link: Make a hard link via the link syscall
         12.2 ln: Make links between files
