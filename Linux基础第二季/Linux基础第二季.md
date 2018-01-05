@@ -1,4 +1,4 @@
-#Linux基础第二季
+# Linux基础第二季
 
 该写第07章 数学运算
 
@@ -6,7 +6,6 @@
 
 函数
 说脚本的时候说一下exit的退出作用。可以传回返回值
-
 
 第11章退出状态码
 
@@ -107,7 +106,6 @@ Coreutils 文件管理和进程管理工具包
     * groupdel 删除组（busybox没有此命令，但是有delgroup）
     * groupmod 修改组信息（busybox没有此命令）
 3. 文件权限
-
     * chmod 改变文件或目录权限
     * chown 改变文件或目录所属用户
     * chgrp 改变文件或目录所属组 
@@ -249,9 +247,6 @@ $HOME/.bashrc
 nohup
 screen
 
-
-下一个介绍Coreutils
-
 所有 GNU 软件包（已经在做教程的就移除）
 
 3dldf  8sync  a2ps  acct  acm  adns  alive  anubis  apl  archimedes  aris  artanis  aspell  auctex  autoconf  autoconf-archive  autogen  automake  avl  ballandpaddle  barcode  bayonne  bazaar  bc  bfd  binutils  bison  bool  bpel2owfn  c-graph  ccaudio  ccd2cue  ccide  ccrtp  ccscript  cflow  cgicc  chess  cim  classpath  classpathx  clisp  combine  commoncpp  complexity  config  consensus  coreutils  cpio  cppi  cssc  cursynth  dap  datamash  dc  ddd  ddrescue  dejagnu  denemo  dia  dico  diction  diffutils  dionysus  direvent  djgpp  dominion  dr-geo  easejs  ed  edma  electric  emacs  emacs-muse  emms  enscript  eprints  epsilon  fdisk  ferret  findutils  fisicalab  foliot  fontopia  fontutils  freedink  freefont  freeipmi  freetalk  fribidi  g-golf  gama  garpd  gawk  gbehistun  gcal  gcc  gcide  gcl  gcompris  gdb  gdbm  gengen  gengetopt  gettext  gforth  ggradebook  ghostscript  gift  gimp  glean  gleem  glib  global  glpk  glue  gmediaserver  gmp  gnash  gnat  gnats  gnatsweb  gneuralnetwork  gnome  gnowsys  gnu-c-manual  gnu-crypto  gnu-pw-mgr  gnuae  gnuastro  gnubatch  gnubg  gnubiff  gnubik  gnucap  gnucash  gnucobol  gnucomm  gnudos  gnue  gnufm  gnugo  gnuit  gnujdoc  gnujump  gnukart  gnulib  gnumach  gnumed  gnumeric  gnump3d  gnun  gnunet  gnupg  gnupod  gnuprologjava  gnuradio  gnurobots  gnuschool  gnushogi  gnusound  gnuspeech  gnuspool  gnustandards  gnustep  gnutls  gnutrition  gnuzilla  goptical  gorm  gpaint  gperf  gprolog  grabcomics  greg  grep  gretl  groff  grub  gsasl  gsegrafix  gsl  gslip  gsrc  gss  gtick  gtk+  gtypist  guile  guile-cv  guile-dbi  guile-gnome  guile-ncurses  guile-opengl  guile-rpc  guile-sdl  guix  gurgle  gv  gvpe  gxmessage  gzip  halifax  health  hello  help2man  hp2xx  html-info  httptunnel  hurd  hyperbole  icecat  idutils  ignuit  indent  inetutils  inklingreader  intlfonts  jacal  java-getopt  jel  jtw  jwhois  kawa  kopi  leg  less  libc  libcdio  libdbh  liberty-eiffel  libextractor  libffcall  libgcrypt  libiconv  libidn  libjit  libmatheval  libmicrohttpd  libredwg  librejs  libsigsegv  libtasn1  libtool  libunistring  libxmi  lightning  lilypond  lims  linux-libre  liquidwar6  lispintro  lrzsz  lsh  m4  macchanger  mailman  mailutils  make  marst  maverik  mc  mcron  mcsim  mdk  mediagoblin  melting  metaexchange  metahtml  metalogic-inference  mifluz  mig  miscfiles  mit-scheme  moe  motti  mpc  mpfr  mpria  mtools  nana  nano  nano-archimedes  ncurses  nettle  network  ocrad  octave  oleo  oo-browser  orgadoc  osip  panorama  parallel  parted  pascal  patch  paxutils  pcb  pdf  pem  pexec  pgccfd  phantom_home  pies  pipo  plotutils  polyxmass  powerguru  proxyknife  pspp  psychosynth  pth  pyconfigure  pythonwebkit  qexo  quickthreads  r  radius  rcs  readline  recutils  reftex  remotecontrol  ring  rottlog  rpge  rush  sather  scm  screen  sed  serveez  sharutils  shepherd  shishi  shmm  shtool  sipwitch  slib  smalltalk  social  solfege  spacechart  speex  spell  sqltutor  src-highlite  stalkerfs  stow  stump  superopt  swbis  sysutils  taler  talkfilters  tar  termcap  termutils  teseq  teximpatient  texinfo  texmacs  thales  time  tramp  trans-coord  trueprint  unifont  units  unrtf  userv  uucp  vc-dwim  vcdimager  vera  vmgen  wb  wdiff  websocket4j  webstump  wget  which  womb  xaos  xboard  xhippo  xlogmaster  xmlat  xnee  xorriso  zile 
@@ -272,7 +267,7 @@ bash内置命令
  shift [n]
  coproc [NAME] command [redirections]                                                           shopt [-pqsu] [-o] [optname ...]
  declare [-aAfFgilnrtux] [-p] [name[=value] ...]                                                source filename [arguments]
- dirs [-clpv] [+N] [-N]                                                                         
+ dirs [-clpv] [+N] [-N]
  time [-p] pipeline
  enable [-a] [-dnps] [-f filename] [name ...]                                                   times
  eval [arg ...]                                                                                 trap [-lp] [[arg] signal_spec ...]
