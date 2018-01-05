@@ -75,12 +75,8 @@
         9.2 expand: Convert tabs to spaces
         9.3 unexpand: Convert spaces to tabs
     12 Special file types
-        12.1 link: Make a hard link via the link syscall
-        12.2 ln: Make links between files
         12.4 mkfifo: Make FIFOs (named pipes)
         12.5 mknod: Make block or character special files
-        12.6 readlink: Print value of a symlink or canonical file name
-        12.8 unlink: Remove files via the unlink syscall
     13 Changing file attributes
         13.1 chown: Change file owner and group
         13.2 chgrp: Change group ownership
