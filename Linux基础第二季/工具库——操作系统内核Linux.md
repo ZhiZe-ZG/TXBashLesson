@@ -114,7 +114,6 @@
         18.5 realpath: Print the resolved file name.
             18.5.1 Realpath usage examples
     19 Working context
-        19.1 pwd: Print working directory
         19.2 stty: Print or change terminal characteristics
             19.2.1 Control settings
             19.2.2 Input settings
@@ -157,8 +156,6 @@
         23.4 nohup: Run a command immune to hangups
         23.5 stdbuf: Run a command with modified I/O stream buffering
         23.6 timeout: Run a command with a time limit
-    24 Process control
-        24.1 kill: Send a signal to processes
     25 Delaying
         25.1 sleep: Delay for a specified time
     26 Numeric operations
