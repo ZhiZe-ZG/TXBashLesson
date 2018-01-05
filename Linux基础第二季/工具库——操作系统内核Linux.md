@@ -5,7 +5,6 @@
 
     1 Introduction
     2 Common options
-        2.1 Exit status
         2.2 Backup options
         2.3 Block size
         2.4 Floating point numbers
@@ -181,7 +180,6 @@
         27.3 Numeric Modes
         27.4 Operator Numeric Modes
         27.5 Directories and the Set-User-ID and Set-Group-ID Bits
-    28 File timestamps
     29 Date input formats
         29.1 General date syntax
         29.2 Calendar date items
@@ -202,6 +200,3 @@
         The sort Command
         The uniq Command
         Putting the Tools Together
-    Appendix A GNU Free Documentation License
-    Index
-
