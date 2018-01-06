@@ -113,17 +113,6 @@
         18.4 mktemp: Create temporary file or directory
         18.5 realpath: Print the resolved file name.
             18.5.1 Realpath usage examples
-    19 Working context
-        19.2 stty: Print or change terminal characteristics
-            19.2.1 Control settings
-            19.2.2 Input settings
-            19.2.3 Output settings
-            19.2.4 Local settings
-            19.2.5 Combination settings
-            19.2.6 Special characters
-            19.2.7 Special settings
-        19.3 printenv: Print all or some environment variables
-        19.4 tty: Print file name of terminal on standard input
     20 User information
         20.1 id: Print user identity
         20.2 logname: Print current login name
