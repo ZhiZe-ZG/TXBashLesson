@@ -89,21 +89,6 @@
         15.1 echo: Print a line of text
         15.2 printf: Format and print data
         15.3 yes: Print a string until interrupted
-    16 Conditions
-        16.1 false: Do nothing, unsuccessfully
-        16.2 true: Do nothing, successfully
-        16.3 test: Check file types and compare values
-            16.3.1 File type tests
-            16.3.2 Access permission tests
-            16.3.3 File characteristic tests
-            16.3.4 String tests
-            16.3.5 Numeric tests
-            16.3.6 Connectives for test
-        16.4 expr: Evaluate expressions
-            16.4.1 String expressions
-            16.4.2 Numeric expressions
-            16.4.3 Relations for expr
-            16.4.4 Examples of using expr
     17 Redirection
         17.1 tee: Redirect output to multiple files or processes
     18 File name manipulation
