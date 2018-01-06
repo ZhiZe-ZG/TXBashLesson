@@ -153,7 +153,6 @@
         23.1 chroot: Run a command with a different root directory
         23.2 env: Run a command in a modified environment
         23.3 nice: Run a command with modified niceness
-        23.4 nohup: Run a command immune to hangups
         23.5 stdbuf: Run a command with modified I/O stream buffering
         23.6 timeout: Run a command with a time limit
     25 Delaying
