@@ -18,13 +18,6 @@
         2.12 Special built-in utilities
         2.13 Standards conformance
         2.14 coreutils: Multi-call program
-    3 Output of entire files
-        3.1 cat: Concatenate and write files
-        3.2 tac: Concatenate and write files in reverse
-        3.3 nl: Number lines and write files
-        3.4 od: Write files in octal or other formats
-        3.5 base32: Transform data into printable data
-        3.6 base64: Transform data into printable data
     4 Formatting file contents
         4.1 fmt: Reformat paragraph text
         4.2 pr: Paginate or columnate files for printing
@@ -85,19 +78,6 @@
         14.3 stat: Report file or file system status
         14.4 sync: Synchronize cached writes to persistent storage
         14.5 truncate: Shrink or extend the size of a file
-    15 Printing text
-        15.1 echo: Print a line of text
-        15.2 printf: Format and print data
-        15.3 yes: Print a string until interrupted
-    17 Redirection
-        17.1 tee: Redirect output to multiple files or processes
-    18 File name manipulation
-        18.1 basename: Strip directory and suffix from a file name
-        18.2 dirname: Strip last file name component
-        18.3 pathchk: Check file name validity and portability
-        18.4 mktemp: Create temporary file or directory
-        18.5 realpath: Print the resolved file name.
-            18.5.1 Realpath usage examples
     20 User information
         20.1 id: Print user identity
         20.2 logname: Print current login name
@@ -131,13 +111,6 @@
         23.6 timeout: Run a command with a time limit
     25 Delaying
         25.1 sleep: Delay for a specified time
-    26 Numeric operations
-        26.1 factor: Print prime factors
-        26.2 numfmt: Reformat numbers
-            26.2.1 General options
-            26.2.2 Possible units:
-            26.2.3 Examples of using numfmt
-        26.3 seq: Print numeric sequences
     27 File permissions
         27.1 Structure of File Mode Bits
         27.2 Symbolic Modes
