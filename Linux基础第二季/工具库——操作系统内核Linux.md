@@ -18,13 +18,8 @@
         2.12 Special built-in utilities
         2.13 Standards conformance
         2.14 coreutils: Multi-call program
-    4 Formatting file contents
-        4.1 fmt: Reformat paragraph text
-        4.2 pr: Paginate or columnate files for printing
-        4.3 fold: Wrap input lines to fit in specified width
     5 Output of parts of files
-        5.1 head: Output the first part of files
-        5.2 tail: Output the last part of files
+    分割和压缩放到一起说
         5.3 split: Split a file into pieces.
         5.4 csplit: Split a file into context-determined pieces
     6 Summarizing files
@@ -36,18 +31,12 @@
         6.6 sha1sum: Print or check SHA-1 digests
         6.7 sha2 utilities: Print or check SHA-2 digests
     7 Operating on sorted files
-        7.1 sort: Sort text files
-        7.2 shuf: Shuffling text
-        7.3 uniq: Uniquify files
-        7.4 comm: Compare two sorted files line by line
         7.5 ptx: Produce permuted indexes
             7.5.1 General options
             7.5.2 Charset selection
             7.5.3 Word selection and input processing
             7.5.4 Output formatting
             7.5.5 The GNU extensions to ptx
-        7.6 tsort: Topological sort
-            7.6.1 tsort: Background
     8 Operating on fields
         8.1 cut: Print selected parts of lines
         8.2 paste: Merge lines of files
