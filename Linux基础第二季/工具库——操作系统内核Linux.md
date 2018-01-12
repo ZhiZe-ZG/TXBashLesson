@@ -7,7 +7,6 @@
     2 Common options
         2.2 Backup options
         2.3 Block size
-        2.4 Floating point numbers
         2.5 Signal specifications
         2.6 chown, chgrp, chroot, id: Disambiguating user names and IDs
         2.7 Sources of random data
