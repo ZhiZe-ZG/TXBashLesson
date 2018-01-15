@@ -49,17 +49,10 @@ zsh-doc
     * stat 显示文件或者文件系统的状态
     * md5sum 对文件进行md5检验
 2. 标准输入输出流工具
-    * cat 链接多个文件并输出到标准输入输出流。
-    * tee从标准输入流读入，输出到标准输出流和指定文件。
     * xargs 在标准输入流的环境中执行命令（例如`find ./ | xargs ls`）。这个命令主要用于辅助一些不支持管道的命令。
 3. 文本编辑
-    * less 文本查看器
-    * sort 文本按行排序
     * uniq 删除文本重复行
     * wc 显示文本行数字数等统计信息
-    * grep 查找文本中符合一定条件的行 
-    * head 查看文本开头几行
-    * tail 查看文本结尾几行
     * cut 从文本行中提取部分内容
     * paste 把文本按行合并
     * join 连接两文本中具有相同字段的行
@@ -67,20 +60,9 @@ zsh-doc
     * diff 逐行比较文件
     * patch 给文件打补丁
     * tr 替换或删除字符
-    * sed 流式编辑器
-    * vi 文本编辑工具
 ****
 然后是用户管理、组管理和文件模式管理。
 ****
-1. 用户
-    * useradd 创建用户（busybox没有此命令，但是有adduser）
-    * userdel 删除用户（busybox没有此命令，但是有deluser）
-    * usermod 修改用户信息（busybox没有此命令）
-    * passwd 修改用户密码
-2. 组
-    * groupadd 创建组（busybox没有此命令，但是有addgroup)
-    * groupdel 删除组（busybox没有此命令，但是有delgroup）
-    * groupmod 修改组信息（busybox没有此命令）
 3. 文件权限
     * chmod 改变文件或目录权限
     * chown 改变文件或目录所属用户
@@ -120,10 +102,6 @@ zsh-doc
 * chown 更改文件所有者
 * chgrp 更改文件所属群组
 * xlogo 用窗体显示一个logo
-## 进程
-* ps 查看当前所有进程的信息
-* top 动态查看进程信息
-* shutdown 关机
 ## 存储介质管理
 * mount 挂载文件系统 在挂载之前，设备并不是一个目录
 * umount 卸载文件系统
@@ -146,7 +124,7 @@ zsh-doc
 * apt （未包含于busybox）
 pacman
 
-非busybox命令：pstree，htop
+非busybox命令：pstree
 环境配置
 * 查看环境变量
 * 修改环境变量
@@ -171,8 +149,6 @@ tar 归档
 在Linux中这使用两个工具，但是在zip工具可以把这两个步骤结合
 
 sudo不能使用bash内嵌命令。
-
-更好的工具 htop 进程管理
 
 ## 环境变量 
 * 所谓的环境变量就是控制bash工作环境的变量。对环境变量进行调整就能影响到shell的工作方式。所以调整环境变量其实就是在设置bash。
