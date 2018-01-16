@@ -15,20 +15,6 @@
         2.10 Traversing symlinks
         2.11 Treating / specially
         2.12 Special built-in utilities
-        2.13 Standards conformance
-        2.14 coreutils: Multi-call program
-    5 Output of parts of files
-    分割和压缩放到一起说
-        5.3 split: Split a file into pieces.
-        5.4 csplit: Split a file into context-determined pieces
-    6 Summarizing files
-        6.1 wc: Print newline, word, and byte counts
-        6.2 sum: Print checksum and block counts
-        6.3 cksum: Print CRC checksum and byte counts
-        6.4 b2sum: Print or check BLAKE2 digests
-        6.5 md5sum: Print or check MD5 digests
-        6.6 sha1sum: Print or check SHA-1 digests
-        6.7 sha2 utilities: Print or check SHA-2 digests
     7 Operating on sorted files
         7.5 ptx: Produce permuted indexes
             7.5.1 General options
@@ -37,7 +23,6 @@
             7.5.4 Output formatting
             7.5.5 The GNU extensions to ptx
     8 Operating on fields
-        8.1 cut: Print selected parts of lines
         8.2 paste: Merge lines of files
         8.3 join: Join lines on a common field
             8.3.1 General options
@@ -56,10 +41,6 @@
     12 Special file types
         12.4 mkfifo: Make FIFOs (named pipes)
         12.5 mknod: Make block or character special files
-    13 Changing file attributes
-        13.1 chown: Change file owner and group
-        13.2 chgrp: Change group ownership
-        13.3 chmod: Change access permissions
     14 Disk usage
         14.1 df: Report file system disk space usage
         14.2 du: Estimate file space usage
@@ -93,7 +74,6 @@
         22.2 runcon: Run a command in specified SELinux context
     23 Modified command invocation
         23.1 chroot: Run a command with a different root directory
-        23.2 env: Run a command in a modified environment
         23.3 nice: Run a command with modified niceness
         23.5 stdbuf: Run a command with modified I/O stream buffering
         23.6 timeout: Run a command with a time limit
