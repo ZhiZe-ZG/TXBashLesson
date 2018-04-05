@@ -1,5 +1,19 @@
 # Linux基础第二季
 
+# 操作系统内核Linux
+
+1. Linux并不是一个完整的系统。它只是一个实现操作系统基本功能的内核。内核配以一系列其他的库和软件才能成为一个完整的操作系统。事实上，我们经常用Linux来指代一系列由Linux内核和GNU计划软件组成的操作系统。
+1. GNU计划的目标是创建一套完全自由的操作系统。但这个系统的内核Hurd历经多年开发都没有稳定。 因此，反倒是GNU计划的其他软件配以同为开源软件的Linux形成的所谓GNU/Linux操作系统取得了成功。
+
+
+    14 Disk usage
+        14.1 df: Report file system disk space usage
+        14.2 du: Estimate file space usage
+        14.3 stat: Report file or file system status
+        14.4 sync: Synchronize cached writes to persistent storage
+        14.5 truncate: Shrink or extend the size of a file
+
+
 介绍包依赖的时候尽量避免循环依赖
 
 先介绍基本的xterm
@@ -31,13 +45,6 @@ C-M-F7 返回图形化界面
 
 arch官网可以查看包依赖关系
 
-# 01 bash基础
-## 部分内置命令
-7. umask用于修改默认文件权限。
-
-zsh-doc 
-安装之后用info查看
-
 
 ****
 接下来简单复习并补充说明一下上一季介绍过的几类命令。首先是文件管理、输入输出流工具和文本编辑。
@@ -60,13 +67,7 @@ zsh-doc
     * diff 逐行比较文件
     * patch 给文件打补丁
     * tr 替换或删除字符
-****
-然后是用户管理、组管理和文件模式管理。
-****
-3. 文件权限
-    * chmod 改变文件或目录权限
-    * chown 改变文件或目录所属用户
-    * chgrp 改变文件或目录所属组 
+
 
 用户信息存放文件
 /etc/passwd 保存用户基本信息
@@ -79,8 +80,6 @@ zsh-doc
 
 12. 命令行小工具
     * clear 清屏
-    * cal 日历
-    * date 日期 
 # 总计划
 * 包管理：dpkg、apt
 # 包含的工具包或者单体软件
@@ -97,10 +96,6 @@ zsh-doc
 * id 显示用户身份标识
 * su 以另一用户身份运行shell
 * sudo 以另一用户身份执行命令
-* passwd 修改或者设置用户密码
-* chmod 更改文件权限
-* chown 更改文件所有者
-* chgrp 更改文件所属群组
 * xlogo 用窗体显示一个logo
 ## 存储介质管理
 * mount 挂载文件系统 在挂载之前，设备并不是一个目录
