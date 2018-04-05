@@ -173,3 +173,5 @@ bash my.sh
 退出当前bash.
 
 ## 视频演示
+
+video/shell脚本演示.mp4
