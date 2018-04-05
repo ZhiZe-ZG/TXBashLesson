@@ -118,6 +118,3 @@ $HOME/.bashrc
 
 nohup
 screen
-
-
-arch等命令,查看系统信息
